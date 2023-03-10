@@ -4,4 +4,18 @@ import { Component } from '@angular/core';
   selector: 'app-test',
   templateUrl: './test.component.html',
 })
-export class TestComponent {}
+export class TestComponent {
+  [x: string]: any;
+  public name: string = 'Nam';
+  public age: number = 17;
+  public fruits = [
+    'Durian',
+    'Jackfruit',
+    'Apple',
+    'Peach',
+    'Pineapple',
+    'Coconut',
+  ];
+
+  constructor() {}
+}

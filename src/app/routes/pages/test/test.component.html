@@ -1,1 +1,25 @@
-<p>test works!</p>
+<section class="container mx-auto px-20 mt-10">
+  <p>Your name:{{ name }}</p>
+  <p>Your age:{{ age }}</p>
+  <span *ngIf="age >= 18">Old enough</span>
+  <span *ngIf="age < 18">Too young</span>
+  <ul class="mt-10">
+    <button
+      [routerLink]="['/']"
+      *ngFor="let item of fruits"
+      class="cursor-pointer block"
+    >
+      {{ item }}
+    </button>
+  </ul>
+
+  <select
+    name="choose fruits"
+    id="fruits"
+    class="mt-10 border-2 border-slate-700 rounded-md px-2"
+  >
+    <option *ngFor="let item of fruits" value="{{ item }}">
+      {{ item }}
+    </option>
+  </select>
+</section>
